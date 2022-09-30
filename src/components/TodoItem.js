@@ -10,7 +10,7 @@ export default class TodoItem extends Component {
                     <div className="todo-icon">
                         <span className={`mx-2 ${completed ? 'text-success' : 'text-secondary'}`} 
                             onClick= {() => handleDoneTask(id)}>
-                                <i className={`${completed ? 'far fa-check-square' : 'far fa-square'}`}/>
+                                <i className={`${completed ? 'fa fa-check-square' : 'far fa-square'}`}/>
                         </span>
                         <span className="mx-2 text-warning" onClick={handleEdit}>
                                 <i className="fas fa-pen"/>

@@ -6,7 +6,7 @@ export default class TodoInput extends Component {
         const {item, handleChange, handleSubmit, editItem} = this.props
 
         return (
-            <div className="card card-body my-3">
+            <div className="card card-body">
                 <form onSubmit={handleSubmit}>
                     <div className="input-group">
                         <div className="input-group-prepend">
@@ -15,7 +15,7 @@ export default class TodoInput extends Component {
                     <input 
                         type="text"
                         className="form-control"
-                        placeholder="New Todo"
+                        placeholder="Nueva tarea"
                         value={item}
                         onChange={handleChange}
                     />
@@ -23,9 +23,9 @@ export default class TodoInput extends Component {
 
                     <button 
                         type="submit"
-                        className={`btn btn-block mt-3 btn-info w-100 ${editItem ? 'btn-success' : 'btn-info'}`}
+                        className={`btn btn-block mt-3 btn-warning w-100 ${editItem ? 'btn-success' : 'btn-info'}`}
                     >
-                        {editItem ? 'Edit task' : 'Add new task'}
+                        {editItem ? 'Edit task' : 'Añadir nueva tarea'}
                     </button>
                 </form>
             </div>

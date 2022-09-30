@@ -1,11 +1,22 @@
-.screen {
-  display: flex;
-  flex-direction: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+body{
+  background-image: url(../fondo-acuarela-pintada-mano-forma-cielo-nubes_24972-1095.jpg);
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#root{
+  height: 0px;
 }
 
 .container{
-  background-color: rgb(54, 206, 211);
+  overflow: hidden;
 }
+
+h6 {
+  width: 90%;
+  overflow: hidden;
+}
+
+

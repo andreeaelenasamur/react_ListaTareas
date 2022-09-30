@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { v4 as uuidv4} from 'uuid'
 import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
+import './App.css'
 
 
 class App extends Component {
@@ -107,30 +108,26 @@ class App extends Component {
           }
 
         return(
-          <div className='screen'>
-          <div className='container'>
-            <div className='row'>
-              <div className='col-10 col-md-8 mx-auto mt-4'>
+            <div className='container mx-10'>
+              <div className='mt-4 mb-4 card card-body '>
                 <h3 className='text-capitalize text-center'>Mis tareas</h3>
-                <TodoInput
-                  item = {this.state.item}
-                  handleChange = {this.handleChange}
-                  handleSubmit = {this.handleSubmit}
-                />
-                <TodoList
-                  items={items}
-                  filterDoneTasks={this.filterDoneTasks}
-                  clearList={this.clearList}
-                  handleDelete={this.handleDelete}
-                  handleEdit={this.handleEdit}
-                  handleDoneTask={this.handleDoneTask}
-                  handleDeleteDoneTasks={this.handleDeleteDoneTasks}
-                  updateTodosToShow={this.updateTodosToShow}
-                />
+                  <TodoInput
+                    item = {this.state.item}
+                    handleChange = {this.handleChange}
+                    handleSubmit = {this.handleSubmit}
+                  />
+                  <TodoList
+                    items={items}
+                    filterDoneTasks={this.filterDoneTasks}
+                    clearList={this.clearList}
+                    handleDelete={this.handleDelete}
+                    handleEdit={this.handleEdit}
+                    handleDoneTask={this.handleDoneTask}
+                    handleDeleteDoneTasks={this.handleDeleteDoneTasks}
+                    updateTodosToShow={this.updateTodosToShow}
+                  />
                 </div>
               </div>
-            </div>
-          </div>
         )
 
       }

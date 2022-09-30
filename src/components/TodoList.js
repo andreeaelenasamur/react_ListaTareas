@@ -15,30 +15,30 @@ export default class TodoList extends Component {
     
     return (
         <Fragment>
-            <h3 className="text-center">TodoList</h3>
+            <h3 className="text-center mt-5">Lista Tareas</h3>
 
-            <div className="row">
+            <div className="row mb-4">
                 <div className="col-md-4">
-                    <button type="button" className="btn btn-info btn-block mt-1" onClick={() => updateTodosToShow("all")}>All
+                    <button type="button" className="btn btn-info btn-block mt-1 w-100" onClick={() => updateTodosToShow("all")}>Todo
                     </button>
                 </div>
 
                 <div className="col-md-4">
-                    <button type="button" className="btn btn-info btn-block mt-1" onClick={() => updateTodosToShow("done")}>
-                        Done
+                    <button type="button" className="btn btn-info btn-block mt-1 w-100" onClick={() => updateTodosToShow("done")}>
+                        Hechas
                     </button>
                 </div>
 
                 <div className="col-md-4">
-                    <button type="button" className="btn btn-info btn-block mt-1" onClick={() => updateTodosToShow("todo")}>
-                        Todo
+                    <button type="button" className="btn btn-info btn-block mt-1 w-100" onClick={() => updateTodosToShow("todo")}>
+                        Por hacer
                     </button>
                 </div>
             </div>
 
             {
                 items.length === 0 ? '' :
-                    <ul className="list-group my-5">
+                    <ul className="list-group list-group-flush">
                         {
                                 items.map(item => {
                                     return (
@@ -57,14 +57,14 @@ export default class TodoList extends Component {
 
                         <div className="row mt-4">
                             <div className="col-md-6">
-                                <button type="button" className="btn btn-danger btn-block mt-1" onClick={handleDeleteDoneTasks}>
-                                    Delete done tasks
+                                <button type="button" className="btn btn-danger btn-block mt-1 w-100" onClick={handleDeleteDoneTasks}>
+                                    Borrar tareas hechas
                                 </button>
                             </div>
 
                             <div className="col-md-6">
-                                <button type="button" className="btn btn-danger btn-block mt-1" onClick={clearList}>
-                                Delete all tasks
+                                <button type="button" className="btn btn-danger btn-block mt-1 w-100" onClick={clearList}>
+                                Borrar todas las tareas
                                 </button>
                             </div>
                         </div>
